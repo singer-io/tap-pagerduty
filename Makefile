@@ -23,4 +23,4 @@ run-tap-to-stitch-with-state:
 	@tail -1 state.json > state.tmp.json
 	@mv state.tmp.json state.json
 test:
-	pylint tap_pagerduty
+	pylint tap_pagerduty --disable line-too-long,missing-module-docstring,dangerous-default-value,missing-function-docstring,missing-class-docstring,no-member,no-self-use,no-else-return,protected-access,attribute-defined-outside-init,unused-argument,redefined-builtin,too-many-locals,redefined-outer-name,useless-super-delegation
