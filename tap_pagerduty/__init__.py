@@ -35,7 +35,7 @@ def sync(config, catalog, state={}):
 
 
 def main():
-    args = singer.utils.parse_args(required_config_keys=["token", "email", "since"])
+    args = singer.utils.parse_args(required_config_keys=["token", "email", "start_date"])
     if args.discover:
         discover(config=args.config)
     else:

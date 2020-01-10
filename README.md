@@ -35,7 +35,7 @@ The tap accepts a JSON-formatted configuration file as arguments. This configura
 
 1. `token`: A valid [Pagerduty REST API key](https://support.pagerduty.com/docs/generating-api-keys).
 2. `email`: A valid email address to be inserted into the `From` header of the [HTTP Request headers](https://v2.developer.pagerduty.com/docs/rest-api#http-request-headers)
-3. `since` A date to be used as the default `since` parameter for all API endpoints that support that parameter.
+3. `start_date` A date to be used as the default `start_date` parameter for all API endpoints that support that parameter.
 
 An bare-bones Pagerduty confirguration may file may look like the following:
 
@@ -43,7 +43,7 @@ An bare-bones Pagerduty confirguration may file may look like the following:
 {
   "token": "foobarfoobar",
   "email": "foo.bar@gmail.com",
-  "since": "2019-01-01"
+  "start_date": "2019-01-01"
 }
 ```
 
@@ -53,10 +53,10 @@ Additionally, you may specify more granular configurations for individual stream
 {
   "token": "foobarfoobar",
   "email": "foo.bar@gmail.com",
-  "since": "2019-08-01",
+  "start_date": "2019-08-01",
   "streams": {
     "incidents": {
-      "since": "last_status_change_at>=2019-08-01",
+      "start_date": "last_status_change_at>=2019-08-01",
       "sort_by": "created_at:asc"
     }
   }
@@ -177,3 +177,5 @@ $ pipenv run tap-pagerduty --config=config/pagerduty.config.json --catalog=catal
 ```
 
 Once you've confirmed that your changes work and the testing suite passes, feel free to put out a PR!
+
+Copyright &copy; 2019 Stitch
