@@ -5,7 +5,7 @@ setuptools.setup(
     name='tap_pagerduty',
     author='David Wallace',
     author_email='david.wallace@goodeggs.com',
-    version='0.1.0rc2',
+    version='0.1.0',
     url='https://github.com/goodeggs/tap-pagerduty',
     description='Singer.io tap for extracting data from Pagerduty v2 API',
     long_description='',
@@ -30,6 +30,12 @@ setuptools.setup(
         'requests==2.22.0',
         'singer-python==5.7.0'
     ],
+    extras_require={
+        'dev': [
+            'pylint',
+            'ipdb'
+        ]
+    },
     python_requires='>=3.6',
     entry_points={
         'console_scripts': ['tap-pagerduty = tap_pagerduty:main']
