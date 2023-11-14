@@ -27,7 +27,7 @@ setuptools.setup(
         'tap_pagerduty': ['schemas/*.json']
     },
     install_requires=[
-        'requests==2.22.0',
+        'requests==2.31.0',
         'singer-python==5.7.0'
     ],
     extras_require={
