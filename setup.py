@@ -16,7 +16,7 @@ setuptools.setup(
         'Topic :: Software Development',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.9'
+        'Programming Language :: Python :: 3 :: Only'
     ],
     keywords="singer tap python pagerduty",
     license='GPLv3',
@@ -34,7 +34,7 @@ setuptools.setup(
             'ipdb'
         ]
     },
-    python_requires='>=3.9',
+    python_requires='>=3.6',
     entry_points={
         'console_scripts': ['tap-pagerduty = tap_pagerduty:main']
     }
