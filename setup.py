@@ -34,7 +34,6 @@ setuptools.setup(
             'ipdb'
         ]
     },
-    python_requires='>=3.6',
     entry_points={
         'console_scripts': ['tap-pagerduty = tap_pagerduty:main']
     }
